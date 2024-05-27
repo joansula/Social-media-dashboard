@@ -6,6 +6,8 @@ import BigCard from "./components/BigCard";
 import SmallCard from "./components/SmallCard";
 import BarChart from "./components/BarChart";
 import RadialChart from "./components/RadialChart";
+import Newfollowers from "./components/NewFollowers";
+import AreaChart from "./components/AreaChart";
 
 function App() {
   return (
@@ -21,15 +23,15 @@ function App() {
         <TopCards bgColor="#D8DDDE" title="Revenue" value="+78%" />
       </div>
       <div className="row" style={{ "margin-left": "25rem" }}>
-        <BigCard title="Reports" chart={<BarChart />} />
-        <SmallCard title="Target" chart={<RadialChart />} />
-        <SmallCard />
+        <BigCard title="Reports" content={<BarChart />} />
+        <SmallCard title="Target" content={<RadialChart />} />
+        <Newfollowers />
       </div>
       <div
         className="row"
         style={{ "margin-bottom": "1rem", "margin-left": "25rem" }}
       >
-        <BigCard />
+        <BigCard title="Activity" content={<AreaChart />} />
         <BigCard />
       </div>
     </div>

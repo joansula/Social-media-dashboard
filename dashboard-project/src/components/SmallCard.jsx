@@ -1,20 +1,11 @@
-export default function SmallCard({ title, chart }) {
+export default function SmallCard({ title, content }) {
   return (
     <div className="card shadow small-card">
-      <div className="card-body">
-        <div className="card-title">
-          <p className="fw-light mt-1 fs-4">{title}</p>
-        </div>
-        <div
-          className="card-chart"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {chart}
-        </div>
+      <div className="card-title mt-3">
+        <p className="fw-light fs-4">{title}</p>
+      </div>
+      <div className="card-body d-flex justify-content-center">
+        <div className="card-chart">{content}</div>
       </div>
     </div>
   );

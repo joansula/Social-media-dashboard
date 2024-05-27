@@ -12,7 +12,7 @@ export default function RadialChart() {
     plotOptions: {
       radialBar: {
         hollow: {
-          size: "40%",
+          size: "50%",
         },
         track: {
           show: true,
@@ -50,15 +50,11 @@ export default function RadialChart() {
         strokeWidth: 0,
         radius: 12,
       },
-      itemMargin: {
-        horizontal: 5,
-        vertical: 5,
-      },
     },
   };
 
   return (
-    <div style={{ width: "450px", height: "450px" }}>
+    <div style={{ width: "430px", height: "430px", marginTop: "-1.8rem" }}>
       <Chart
         options={options}
         series={series}
