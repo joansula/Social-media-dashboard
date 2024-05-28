@@ -4,11 +4,11 @@ import Chart from "react-apexcharts";
 export default function AreaChart() {
   const series = [
     {
-      name: "Advertisment 1",
+      name: "Facebook ads",
       data: [31, 40, 28, 51, 42, 109, 100],
     },
     {
-      name: "Advertisment ",
+      name: "Instagram ads ",
       data: [11, 32, 45, 32, 34, 52, 41],
     },
   ];

@@ -19,27 +19,22 @@ export default function Navbar() {
         </li>
         <li className="nav-item mt-3">
           <a className="nav-link" href="#">
-            <i className="fa-solid fa-phone"></i> Contact Information
-          </a>
-        </li>
-        <li className="nav-item mt-3">
-          <a className="nav-link" href="#">
             <i className="fa-solid fa-calendar-days"></i> Calendar
           </a>
         </li>
         <li className="nav-item mt-3">
           <a className="nav-link active" href="#">
-            <i className="fa-solid fa-chart-simple"></i> Bar Chart
+            <i className="fa-solid fa-chart-simple"></i> Monthly Report
           </a>
         </li>
         <li className="nav-item mt-3">
           <a className="nav-link" href="#">
-            <i className="fa-solid fa-map"></i> Geography Chart
+            <i class="fa-solid fa-diagram-project"></i> Weekly report
           </a>
         </li>
         <li className="nav-item mt-3">
           <a className="nav-link" href="#">
-            <i className="fa-solid fa-chart-line"></i> Line Chart
+            <i className="fa-solid fa-chart-line"></i> Ad activity
           </a>
         </li>
       </ul>

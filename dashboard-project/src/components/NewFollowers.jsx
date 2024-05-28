@@ -27,7 +27,7 @@ export default function Newfollowers() {
               key={index}
               className="d-flex justify-content-between align-items-center mb-3 list-group-item"
             >
-              <span>{user.username}</span>
+              <span>@{user.username}</span>
               <FollowButton />
             </li>
           ))}
