@@ -1,41 +1,25 @@
 import React from "react";
-import "./index.css";
-import Navbar from "./components/Navbar";
-import TopCards from "./components/TopCards";
-import BigCard from "./components/BigCard";
-import SmallCard from "./components/SmallCard";
-import BarChart from "./components/BarChart";
-import RadialChart from "./components/RadialChart";
-import Newfollowers from "./components/NewFollowers";
-import AreaChart from "./components/AreaChart";
-import HeatMap from "./components/HeatMap";
+import "/src/index.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Homepage from "/src/pages/Homepage.jsx";
+import Calendar from "/src/pages/Calendar";
+import MonthlyReport from "./pages/MonthlyReport";
+import WeeklyReport from "./pages/WeeklyReport";
+import AdActivity from "./pages/AdActivity";
 
 function App() {
   return (
-    <div className="container-fluid">
-      <Navbar />
-      <div
-        className="row"
-        style={{ "margin-top": "5rem", "margin-left": "25rem" }}
-      >
-        <TopCards bgColor="#FB8B24" title="Emails sent" value="1,226" />
-        <TopCards bgColor="#D90368" title="Subscribers" value="+23" />
-        <TopCards bgColor="#04A777" title="Followers" value="+342" />
-        <TopCards bgColor="#D8DDDE" title="Revenue" value="+78%" />
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/monthly-report" element={<MonthlyReport />} />
+          <Route path="/weekly-report" element={<WeeklyReport />} />
+          <Route path="/ad-activity" element={<AdActivity />} />
+        </Routes>
       </div>
-      <div className="row" style={{ "margin-left": "25rem" }}>
-        <BigCard title="Monthly reports" content={<BarChart />} />
-        <SmallCard title="Progress" content={<RadialChart />} />
-        <Newfollowers />
-      </div>
-      <div
-        className="row"
-        style={{ "margin-bottom": "1rem", "margin-left": "25rem" }}
-      >
-        <BigCard title="Ad activity" content={<AreaChart />} />
-        <BigCard title="Weekly reports" content={<HeatMap />} />
-      </div>
-    </div>
+    </Router>
   );
 }
 

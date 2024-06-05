@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
-import BarChartData from "/src/components/BarChartData.jsx";
+import BarChartData from "/src/components/charts/BarChartData.jsx";
 
 export default function BarChart() {
   const options = {
@@ -29,5 +29,7 @@ export default function BarChart() {
     },
   };
 
-  return <Chart options={options} series={BarChartData} type="bar" />;
+  return (
+    <Chart options={options} series={BarChartData} type="bar" height={380} />
+  );
 }

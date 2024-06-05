@@ -1,4 +1,5 @@
 import appLogo from "./appLogo.png";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -8,34 +9,34 @@ export default function Navbar() {
       </li>
       <ul className="nav flex-column">
         <li className="nav-item mt-2 ml-3">
-          <a className="nav-title d-block text-center" href="#">
+          <Link className="nav-title d-block text-center" to="/">
             InsightHub
-          </a>
+          </Link>
         </li>
         <li className="nav-item mt-3">
-          <a className="nav-link active" href="#">
+          <Link className="nav-link" to="/">
             <i className="fa-solid fa-solar-panel"></i> Dashboard
-          </a>
+          </Link>
         </li>
         <li className="nav-item mt-3">
-          <a className="nav-link" href="#">
+          <Link className="nav-link" to="/calendar">
             <i className="fa-solid fa-calendar-days"></i> Calendar
-          </a>
+          </Link>
         </li>
         <li className="nav-item mt-3">
-          <a className="nav-link active" href="#">
+          <Link className="nav-link" to="/monthly-report">
             <i className="fa-solid fa-chart-simple"></i> Monthly Report
-          </a>
+          </Link>
         </li>
         <li className="nav-item mt-3">
-          <a className="nav-link" href="#">
-            <i class="fa-solid fa-diagram-project"></i> Weekly report
-          </a>
+          <Link className="nav-link" to="/weekly-report">
+            <i className="fa-solid fa-diagram-project"></i> Weekly Report
+          </Link>
         </li>
         <li className="nav-item mt-3">
-          <a className="nav-link" href="#">
-            <i className="fa-solid fa-chart-line"></i> Ad activity
-          </a>
+          <Link className="nav-link" to="/ad-activity">
+            <i className="fa-solid fa-chart-line"></i> Ad Activity
+          </Link>
         </li>
       </ul>
     </div>
