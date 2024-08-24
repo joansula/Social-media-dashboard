@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="vertical-navbar shadow-lg">
+    <div className="vertical-navbar navbar-expand-lg shadow-lg">
       <li className="nav-item d-block text-center mt-5 ml-3">
         <img src={appLogo} height="100px" alt="App Logo" />
       </li>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
       <ul className="nav flex-column">
         <li className="nav-item mt-2 ml-3">
           <Link className="nav-title d-block text-center" to="/">
